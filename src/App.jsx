@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import {
   About,
   Contact,
@@ -34,7 +35,7 @@ const App = () => {
 
   return (
     <div>
-      <BrowserRouter>
+      <HashRouter>
           <Navbar />
         <Routes>
           <Route
@@ -93,7 +94,7 @@ const App = () => {
             }
           />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
 
      
     </div>
