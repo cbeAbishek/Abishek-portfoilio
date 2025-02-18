@@ -33,8 +33,8 @@ const App = () => {
   };
 
   return (
-    <HashRouter>
     <div>
+      <HashRouter>
           <Navbar />
         <Routes>
           <Route
@@ -93,8 +93,8 @@ const App = () => {
             }
           />
         </Routes>
-    </div>
     </HashRouter>
+    </div>
   );
 };
 
