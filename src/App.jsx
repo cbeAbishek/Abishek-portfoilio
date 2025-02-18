@@ -1,4 +1,4 @@
-import { HashRouter } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import {
   About,
   Contact,
@@ -9,6 +9,7 @@ import {
   Works,
   StarsCanvas,
 } from "./components";
+import Testimonial from "./components/MainPage/Feedbacks.jsx";
 import { useState, useEffect } from "react";
 import Footer from "./components/Footer/Footer";
 import { BsArrowUp } from "react-icons/bs";
@@ -32,17 +33,17 @@ const App = () => {
   };
 
   return (
+    <HashRouter>
     <div>
-      <HashRouter>
-        <Navbar />
+          <Navbar />
         <Routes>
           <Route
             path="/"
             element={
               <div className="relative z-0 bg-primary">
-                <div className="relative z-0">
-                  <Hero />
-                </div>
+                  <div className="relative z-0">
+                    <Hero />
+                   </div>
                 <Tech />
                 <About />
                 <Works />
@@ -55,13 +56,13 @@ const App = () => {
                 <Footer />
 
                 {showBackToTop && (
-                  <button
-                    className="fixed bottom-4 right-4 p-2 cursor-pointer backToTop"
-                    onClick={handleBackToTop}
-                  >
-                    <BsArrowUp />
-                  </button>
-                )}
+        <button
+          className="fixed bottom-4 right-4 p-2 cursor-pointer backToTop"
+          onClick={handleBackToTop}
+        >
+          <BsArrowUp />
+        </button>
+      )}
               </div>
             }
           />
@@ -87,13 +88,13 @@ const App = () => {
             path="/statistics"
             element={
               <div className="bg-primary">
-                <Statisticspage />
+                <Statisticspage/>
               </div>
             }
           />
         </Routes>
-      </HashRouter>
     </div>
+    </HashRouter>
   );
 };
 
