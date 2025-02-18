@@ -52,7 +52,7 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          console.log(error);
+          console.log("Email sent successfully!"); 
           alert("Thank you. I will get back to you as soon as possible.");
 
           setForm({
