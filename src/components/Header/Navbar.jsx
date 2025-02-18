@@ -95,7 +95,7 @@ const Navbar = () => {
               active === Link.title ? "  text-white" : "text-secondary"
             } hover:text-white text-[18px] font-medium cursor-pointer`}
           >
-            Code Statistics
+            Milestones
           </Link>
 
           
@@ -180,7 +180,7 @@ const Navbar = () => {
                   active === Link.title ? "  text-white" : "text-secondary"
                 } hover:text-white text-[18px] font-medium cursor-pointer`}
               >
-                Code Statistics
+                Highlights
               </Link>
             </ul>
           </div>

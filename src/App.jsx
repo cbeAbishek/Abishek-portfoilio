@@ -39,11 +39,11 @@ const App = () => {
           path="/"
           element={
             <>
-            <div className="relative z-0">
               <Hero />
               <Tech />
               <About />
               <Works />
+            <div className="relative z-0">
               <Contact />
               <StarsCanvas /></div>
               <Footer />

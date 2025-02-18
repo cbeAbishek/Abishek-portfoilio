@@ -1,54 +1,33 @@
 import React from "react";
-
-import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../../styles";
 import { SectionWrapper } from "../../hoc";
 import { textVariant } from "../../utils/motion";
 import { AiOutlineArrowRight } from "react-icons/ai";
-import { AnimatedTestimonials } from "../ui/animated-testimonals";
 import gitmap from "../../assets/gitmap.png";
-import diwali from "../../assets/my-images/diwali.jpg" ;
-import launch from "../../assets/my-images/launch.jpg" ;
-import mic from "../../assets/my-images/mic.jpg" ;
-import prize from "../../assets/my-images/prize.jpg" ;
-import { holophin } from "../../assets";
+import handloom from "../../assets/Handloom raja.mp4";
+import cet1 from "../../assets/certificates/cet1.png";
+import cet2 from "../../assets/certificates/cet2.jpeg";
+import cet3 from "../../assets/certificates/cet3.jpeg";
+import cet4 from "../../assets/certificates/cet4.jpeg";
+import cet5 from "../../assets/certificates/cet5.png";
+import cet6 from "../../assets/certificates/cet6.png";
+import cet7 from "../../assets/certificates/cet7.jpg";
+import cet8 from "../../assets/certificates/cet8.jpg";
+import ach1 from "../../assets/certificates/ach1.jpg";
+import ach2 from "../../assets/certificates/ach2.jpg";
+import ach3 from "../../assets/certificates/ach3.jpg";
+import ach4 from "../../assets/certificates/ach4.jpg";
 
 const StatisticPage = () => {
-
-  const testimonials = [
-    {
-      quote: "This product has completely transformed the way I work. Highly recommended!",
-      name: "Jane Doe",
-      designation: "Software Engineer",
-      src: diwali,
-    },
-    {
-      quote: "Exceptional service and quality. I couldn't be happier with my experience.",
-      name: "John Smith",
-      designation: "Product Manager",
-      src: launch, 
-    },
-    {
-      quote: "A wonderful tool that has saved me countless hours. Great work by the team!",
-      name: "Emily Davis",
-      designation: "Designer",
-      src: mic, 
-    },
-    {
-      quote: "A wonderful tool that has saved me countless hours. Great work by the team!",
-      name: "TechHunterees Hackthon",
-      designation: "Designer",
-      src: prize, 
-    },
-  ];
-
   return (
     <>
       <div className="flex justify-between  mt-12 md:mt-2">
         <motion.div variants={textVariant()}>
           <div>
-            {/* <p className={`${styles.sectionSubText} mt-10`}>My work</p> */}
+            <p className={`${styles.sectionSubText} mt-10`}>
+              My work | Certificates | Achivements
+            </p>
             <h2 className={`${styles.sectionHeadText} flux`}>Github Stats</h2>
           </div>
         </motion.div>
@@ -67,37 +46,9 @@ const StatisticPage = () => {
             View More <AiOutlineArrowRight />
           </a>
         </div>
-
-        {/* <div variants={textVariant()}> */}
       </div>
-      {/* <div className="w-full flex">
-        <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
-          className="mt-1 text-secondary text-[17px] max-w-3xl leading-[30px]"
-        >
-          Following projects showcases my skills and experience through
-          real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
-        </motion.p>
-      </div> */}
 
       <div className="mt-10 flex items-center justify-center flex-wrap gap-20">
-        {/* <Tilt transition-all>
-          <a href="https://app.daily.dev/Abhishek9503">
-            <img
-              className=""
-              src="https://api.daily.dev/devcards/612db3c2a6bb4916824419a215f49bcd.png?r=xmo"
-              width="400"
-              alt="Abhishek Yadav's Dev Card"
-            />
-          </a>
-
-          <img src="https://komarev.com/ghpvc/?username=Abhishek9503" alt="Profile Views" />
-
-        </Tilt> */}
-
         <div className="abhishek">
           <img
             width="100%"
@@ -105,7 +56,7 @@ const StatisticPage = () => {
           />
           <img
             width="100%"
-            src="https://github-readme-streak-stats.herokuapp.com/?user=cbeAbishek&theme=tokyonight"
+            src="https://github-readme-streak-stats.herokuapp.com/?user=cbeabishek&theme=tokyonight"
           />
 
           <img src={gitmap} width={500} alt="" />
@@ -115,20 +66,103 @@ const StatisticPage = () => {
             target="_blank "
             className=" flex justify-start items-center gap-12 mt-5"
           >
-            <span className="abhishek-btn">
-              ⭐⭐⭐⭐⭐
-            </span>
+            <span className="abhishek-btn">⭐⭐⭐⭐⭐</span>
           </a>
         </div>
+      </div>
+      <div className="mt-10 flex-row items-center justify-items-center">
+        <motion.div variants={textVariant()}>
+          <div className="flex justify-between  mt-12 md:mt-2">
+            <h2 className={`${styles.sectionHeadText} flux`}>Video</h2>
+          </div>
+        </motion.div>
 
-        {/* <img className="mt-1" src={holophin} alt="holphin" /> */}
+        <video class="mt-5 h-sm w-sm rounded-lg" controls>
+          <source src={handloom} type="video/mp4" />
+        </video>
+      </div>
 
 
-      
+      <div className="mt-10 flex-row items-center justify-items-center">
+      <motion.div variants={textVariant()}>
+          <div className="flex justify-between  mt-12 md:mt-2">
+            <h2 className={`${styles.sectionHeadText} flux`}>Achivements</h2>
+          </div>
+        </motion.div>
+        <div className="flex flex-wrap gap-10 place-content-center">
+        <img
+            className="bg-cyan-500 shadow-xl shadow-cyan-500/50 mt-10 h-48 w-64 max-w-sm transition-all duration-300 rounded-lg blur-sm hover:blur-none"
+            src={ach1}
+            alt="image description"
+          ></img>
+        <img
+            className="bg-cyan-500 shadow-xl shadow-cyan-500/50 mt-10 h-48 w-64 max-w-sm transition-all duration-300 rounded-lg blur-sm hover:blur-none"
+            src={ach2}
+            alt="image description"
+          ></img>
+        <img
+            className="bg-cyan-500 shadow-xl shadow-cyan-500/50 mt-10 h-48 w-64 max-w-sm transition-all duration-300 rounded-lg blur-sm hover:blur-none"
+            src={ach3}
+            alt="image description"
+          ></img>
+        <img
+            className="bg-cyan-500 shadow-xl shadow-cyan-500/50 mt-10 h-48 w-64 max-w-sm transition-all duration-300 rounded-lg blur-sm hover:blur-none"
+            src={ach4}
+            alt="image description"
+          ></img>
+        </div>
+      </div>
 
 
-        <AnimatedTestimonials testimonials={testimonials}/>
+      <div className="mt-10 flex-row items-center justify-items-center">
+        <motion.div variants={textVariant()}>
+          <div className="flex justify-between  mt-12 md:mt-2">
+            <h2 className={`${styles.sectionHeadText} flux`}>Certificates</h2>
+          </div>
+        </motion.div>
 
+        <div className="flex flex-wrap gap-10 place-content-center">
+          <img
+            className="bg-cyan-500 shadow-xl shadow-cyan-500/50 mt-10 h-48 w-64 max-w-sm transition-all duration-300 rounded-lg blur-sm hover:blur-none"
+            src={cet1}
+            alt="image description"
+          ></img>
+          <img
+            className="bg-cyan-500 shadow-xl shadow-cyan-500/50 mt-10 h-48 w-64 max-w-sm transition-all duration-300 rounded-lg blur-sm hover:blur-none"
+            src={cet2}
+            alt="image description"
+          ></img>
+          <img
+            className="bg-cyan-500 shadow-xl shadow-cyan-500/50 mt-10 h-48 w-64 max-w-sm transition-all duration-300 rounded-lg blur-sm hover:blur-none"
+            src={cet3}
+            alt="image description"
+          ></img>
+          <img
+            className="bg-cyan-500 shadow-xl shadow-cyan-500/50 mt-10 h-48 w-64 max-w-sm transition-all duration-300 rounded-lg blur-sm hover:blur-none"
+            src={cet4}
+            alt="image description"
+          ></img>
+          <img
+            className="bg-cyan-500 shadow-xl shadow-cyan-500/50 mt-10 h-48 w-64 max-w-sm transition-all duration-300 rounded-lg blur-sm hover:blur-none"
+            src={cet5}
+            alt="image description"
+          ></img>
+          <img
+            className="bg-cyan-500 shadow-xl shadow-cyan-500/50 mt-10 h-48 w-64 max-w-sm transition-all duration-300 rounded-lg blur-sm hover:blur-none"
+            src={cet6}
+            alt="image description"
+          ></img>
+          <img
+            className="bg-cyan-500 shadow-xl shadow-cyan-500/50 mt-10 h-48 w-64 max-w-sm transition-all duration-300 rounded-lg blur-sm hover:blur-none"
+            src={cet7}
+            alt="image description"
+          ></img>
+          <img
+            className="bg-cyan-500 shadow-xl shadow-cyan-500/50 mt-10 h-48 w-64 max-w-sm transition-all duration-300 rounded-lg blur-sm hover:blur-none"
+            src={cet8}
+            alt="image description"
+          ></img>
+        </div>
       </div>
     </>
   );
