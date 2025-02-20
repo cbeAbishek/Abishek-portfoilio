@@ -12,21 +12,11 @@ const Footer = () => {
         >
           <div className="group border-[3px] border-white rounded-full h-12 w-7 flex justify-center lg:scale-100 scale-75">
             <div className="bg-white h-3 w-1 rounded-full mt-[10px] animate-bounce lg:scale-100 scale-75"></div>
-          </div>
-
-          <a href="#" target="_blank">
-            <img
-              src="https://hitwebcounter.com/counter/counter.php?page=8792236&style=0001&nbdigits=3&type=page&initCount=1"
-              title="Counter Widget"
-              Alt="Visit counter For Websites"
-              border="0"
-            />
-          </a>
-          
+          </div>          
           <p className={styles.sectionSubText}>My Service</p>
         </a>
       </div>
-    <div className="  flex justify-evenly align-center relative  sm:px-16 px-6 sm:py-12 py-10 min-h-[250px] mt-20 select-none">
+    <div className="flex justify-evenly align-center relative  sm:px-16 px-6 sm:py-12 py-10 min-h-[250px] mt-20 select-none">
       
       <div className="flex  flex-col items-center">
         <img src={logo} alt="logo" className="w-36  mb-5" />

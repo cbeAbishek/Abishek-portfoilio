@@ -8,7 +8,7 @@ import { styles } from "../../styles";
 
 const TechCard = ({ index, icon , name}) => {
   return (
-    <Tilt className="w-28 h-28">
+    <Tilt className="w-28 h-28 ">
       <div
         variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
         className=" w-full green-pink-gradient rounded-lg p-[1px] shadow-card select-none"

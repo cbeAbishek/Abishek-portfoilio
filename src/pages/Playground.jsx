@@ -8,7 +8,7 @@ const Playground = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 6000);
+    }, 15000);
   }, []);
 
   return (

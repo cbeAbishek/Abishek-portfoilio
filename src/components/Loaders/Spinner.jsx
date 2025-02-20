@@ -1,4 +1,5 @@
 import React from 'react'
+import dance from "../../assets/dance.gif";
 
 const Spinner = () => {
   return (
@@ -13,9 +14,14 @@ const Spinner = () => {
             <div></div>
             <div></div>
           </div>
-        <div className="instruction mt-10">
+        <div className="instruction mt-10 justify-items-center">
+        <img
+          src={dance}
+          alt="web-development"
+          className="w-40 h-40 object-contain"
+        />
         <div className="game_ins text-white font-semibold text-center text-[0.9rem]">Please be patient - Page can take 15 Seconds to load</div>
-          {/* <div className="game_ins text-white font-semibold text-center text-[0.9rem]">Game Rules use - Up, Left, Right, Down, W, S, D, A to Play</div> */}
+          
         </div>
         </div>
 

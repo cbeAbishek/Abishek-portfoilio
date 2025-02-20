@@ -7,12 +7,10 @@ import { EarthCanvas } from "../canvas";
 import { SectionWrapper } from "../../hoc";
 import { slideIn } from "../../utils/motion";
 
-// 8D54qyP1R78P2J6v8
-//template_8uk46am
-// service_uv1s6xt
-
+// const [showPopup, setShowPopup] = useState(false); 
 const Contact = () => {
   const formRef = useRef();
+  const [showPopup, setShowPopup] = useState(false);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -53,7 +51,8 @@ const Contact = () => {
         () => {
           setLoading(false);
           console.log("Email sent successfully!"); 
-          alert("Thank you. I will get back to you as soon as possible.");
+          setShowPopup(true);
+          // alert("Thank you. I will get back to you as soon as possible.");
 
           setForm({
             name: "",
@@ -74,6 +73,20 @@ const Contact = () => {
     <div
       className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
     >
+      {showPopup && (
+        <div className="fixed  inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+          <div className="bg-white/30 backdrop-blur-none m-8 backdrop-blur-xs p-6 rounded-2xl shadow-lg text-center">
+            <h2 className="text-xl font-bold mb-4">Email Sent Successfully!</h2>
+            <p className="mb-4">Thank you! I will get back to you as soon as possible.</p>
+            <button
+              onClick={() => setShowPopup(false)} // Close the popup
+              className="px-6 py-2 bg-gradient-to-r from-blue-600 to-violet-600 text-white rounded-lg shadow-lg hover:-translate-y-1 hover:scale-110 duration-200"
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      )}
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
