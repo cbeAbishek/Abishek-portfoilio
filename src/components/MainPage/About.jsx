@@ -10,36 +10,69 @@ import { fadeIn, textVariant } from "../../utils/motion";
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt
     options={{
-      max: 25,
-      scale: 1.05,
+      max: 30,
+      scale: 1.08,
       speed: 450,
+      glare: true,
+      "max-glare": 0.1,
     }}
-    className="xs:w-[300px] w-full transition-all group"
+    className="xs:w-[320px] w-full transition-all group"
   >
     <motion.div
       variants={fadeIn("right", "spring", index * 0.3, 0.75)}
-      className="w-full bg-gradient-to-br from-gray-900 via-gray-800 to-black p-[2px] rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 group-hover:shadow-blue-500/30"
+      className="w-full bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20 p-[3px] rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-700 group-hover:shadow-blue-500/40"
     >
-      <div className="bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-sm rounded-3xl py-10 px-8 min-h-[340px] flex justify-center items-center flex-col relative overflow-hidden border border-gray-700/30 hover:border-gray-600/50 transition-all duration-300">
-        {/* Background glow effect */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-        {/* Icon container with glow */}
-        <div className="relative mb-8 p-5 rounded-2xl group-hover:border-blue-500/40 transition-all duration-300">
+      <div className="bg-gradient-to-br from-gray-900/95 via-gray-800/95 to-gray-900/95 backdrop-blur-lg rounded-3xl py-12 px-10 min-h-[380px] flex justify-center items-center flex-col relative overflow-hidden border border-gray-700/50 hover:border-blue-500/60 transition-all duration-500">
+        
+        {/* Animated background particles */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-blue-400/30 rounded-full animate-pulse"></div>
+          <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400/40 rounded-full animate-ping"></div>
+          <div className="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 bg-pink-400/30 rounded-full animate-pulse delay-300"></div>
+        </div>
+        
+        {/* Dynamic background glow */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-purple-500/0 to-pink-500/0 group-hover:from-blue-500/15 group-hover:via-purple-500/10 group-hover:to-pink-500/15 transition-all duration-700"></div>
+        
+        {/* Icon container with enhanced effects */}
+        <div className="relative mb-8 p-6 rounded-3xl bg-gradient-to-br from-gray-800/80 to-gray-700/60 backdrop-blur-sm border border-gray-600/30 group-hover:border-blue-400/60 transition-all duration-500 group-hover:shadow-lg group-hover:shadow-blue-500/30">
           <img
             src={icon}
             alt={title}
-            className="w-24 h-24 object-contain transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
+            className="w-32 h-32 object-contain transition-all duration-500 group-hover:scale-125 group-hover:rotate-3 group-hover:brightness-110 filter drop-shadow-lg"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
+          
+          {/* Icon glow effect */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-400/0 via-purple-400/0 to-pink-400/0 group-hover:from-blue-400/30 group-hover:via-purple-400/20 group-hover:to-pink-400/30 rounded-3xl transition-all duration-500 blur-lg"></div>
+          
+          {/* Rotating border animation */}
+          {/* <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-3xl opacity-0 group-hover:opacity-20 group-hover:animate-spin transition-opacity duration-700" style={{animationDuration: '3s'}}></div> */}
         </div>
 
-        <h3 className="text-white text-[20px] font-bold text-center leading-relaxed transition-all duration-300 group-hover:text-blue-300 relative z-10">
-          {title}
-        </h3>
+        {/* Title with enhanced styling */}
+        <div className="relative z-10 text-center">
+          <h3 className="text-white text-[22px] font-bold leading-relaxed transition-all duration-500 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:via-purple-400 group-hover:to-pink-400 group-hover:bg-clip-text mb-4">
+            {title}
+          </h3>
+          
+          {/* Subtitle line */}
+          <div className="w-16 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+        </div>
 
-        {/* Subtle animated border */}
-        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 rounded-full"></div>
+        {/* Bottom accent line with animation */}
+        <div className="absolute bottom-0 left-0 w-full h-1.5 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 rounded-b-3xl"></div>
+        
+        {/* Corner accents */}
+        <div className="absolute top-6 right-6 w-3 h-3 border-t-2 border-r-2 border-blue-400/0 group-hover:border-blue-400/60 transition-all duration-500"></div>
+        <div className="absolute bottom-6 left-6 w-3 h-3 border-b-2 border-l-2 border-purple-400/0 group-hover:border-purple-400/60 transition-all duration-500"></div>
+        
+        {/* Hover overlay with subtle pattern */}
+        <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-700 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500" 
+             style={{
+               backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(255,255,255,0.15) 1px, transparent 0)',
+               backgroundSize: '20px 20px'
+             }}>
+        </div>
       </div>
     </motion.div>
   </Tilt>

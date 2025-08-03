@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { logo } from "../../assets";
-import resume from "/src/Abhishek's Resume.pdf";
+import resume from "/src/Abishek_Resume.pdf";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -215,7 +215,7 @@ const Navbar = () => {
               <ul className="list-none flex justify-end items-start flex-col gap-3 relative z-10">
                 <a
                   href={resume}
-                  download="Abishek Abishek.pdf"
+                  download="Abishek.pdf"
                   className="w-full group"
                 >
                   <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-[15px] font-semibold cursor-pointer transition-all duration-300 hover:scale-[1.02] rounded-lg px-4 py-3 border border-blue-500/20 hover:shadow-lg hover:shadow-blue-500/25">

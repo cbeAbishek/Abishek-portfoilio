@@ -67,10 +67,10 @@ const Contact = () => {
   };
 
   return (
-    <div className="relative min-h-screen overflow-hidden rounded-xl bg-gray-900 text-white">
+    <div className="relative min-h-screen overflow-hidden rounded-xl  text-white">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-800"></div>
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-pink-500/5"></div>
+      <div className="absolute inset-0 "></div>
+      <div className="absolute top-0 left-0 w-full h-full "></div>
       
       {/* Floating Background Shapes */}
       <motion.div
@@ -347,7 +347,7 @@ const Contact = () => {
           />
           
           {/* 3D Model */}
-          <div className="relative z-10 h-[300px] sm:h-[400px] lg:h-[600px] p-4">
+          <div className="relative z-10 h-[300px] sm:h-[400px] lg:h-[600px] p-1">
             <From3D
               modelPath="./man/scene.gltf"
               height="100%"

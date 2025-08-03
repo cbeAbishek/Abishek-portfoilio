@@ -13,6 +13,7 @@ import Footer from "./components/Footer/Footer";
 import { BsArrowUp } from "react-icons/bs";
 import { Experience, Playground, Project } from "./pages";
 import Statisticspage from "./components/MainPage/Statisticspage";
+import ResumePDFView from "./components/resume/resume_pdfview";
 
 const App = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -65,7 +66,7 @@ const App = () => {
         <Route path="/play" element={<Playground />} />
         <Route path="/experience" element={<Experience />} />
         <Route path="/statistics" element={<Statisticspage />} />
-        
+        <Route path="/resume" element={<ResumePDFView />} />
       </Routes>
     </Router>
   );
