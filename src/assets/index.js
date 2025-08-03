@@ -41,7 +41,7 @@ import ansible from "./tech/ansible.webp";
 import nginx from "./tech/nginx.webp";
 import kub from "./tech/kub.png";
 import tera from "./tech/terra.png";
-import jenkins from "./tech/jenkins.png";
+import jenkins from "./tech/Jenkins.png";
 import aws from "./tech/aws.png";
 import azure from "./tech/Azure.png";
 
