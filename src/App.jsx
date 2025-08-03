@@ -1,5 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {
   About,
   Contact,
@@ -33,14 +33,14 @@ const App = () => {
 
   return (
     <Router>
-      <div className="relative z-0 bg-primary">
+      <div className="App">
+        <Navbar />
         <Routes>
           {/* Home Page */}
           <Route
             path="/"
             element={
               <>
-                <Navbar />
                 <Hero />
                 <Tech />
                 <About />
@@ -52,7 +52,7 @@ const App = () => {
                 <Footer />
                 {showBackToTop && (
                   <button
-                    className="fixed bottom-4 right-4 p-2 cursor-pointer backToTop z-50"
+                    className="fixed bottom-4 right-4 p-2 cursor-pointer backToTop"
                     onClick={handleBackToTop}
                   >
                     <BsArrowUp />
@@ -61,67 +61,26 @@ const App = () => {
               </>
             }
           />
-          <Route
-            path="/project"
-            element={
-              <>
-                <Navbar />
-                <Project />
-                <Footer />
-              </>
-            }
-          />
-          <Route
-            path="/play"
-            element={
-              <>
-                <Navbar />
-                <Playground />
-                <Footer />
-              </>
-            }
-          />
-          <Route
-            path="/experience"
-            element={
-              <>
-                <Navbar />
-                <Experience />
-                <Footer />
-              </>
-            }
-          />
-          <Route
-            path="/statistics"
-            element={
-              <>
-                <Navbar />
-                <Statisticspage />
-                <Footer />
-              </>
-            }
-          />
-          <Route
-            path="/resume"
-            element={
-              <>
-                <Navbar />
-                <ResumePDFView />
-                <Footer />
-              </>
-            }
-          />
-          {/* Catch all route for 404 */}
+          <Route path="/project" element={<Project />} />
+          <Route path="/play" element={<Playground />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/statistics" element={<Statisticspage />} />
+          <Route path="/resume" element={<ResumePDFView />} />
+          {/* Catch-all route for 404 */}
           <Route
             path="*"
             element={
-              <>
-                <Navbar />
-                <div className="flex items-center justify-center min-h-screen">
-                  <h1 className="text-white text-4xl">Page Not Found</h1>
+              <div className="min-h-screen bg-primary flex items-center justify-center">
+                <div className="text-white text-center">
+                  <h1 className="text-2xl mb-4">Page Not Found</h1>
+                  <a
+                    href="/"
+                    className="px-4 py-2 bg-blue-600 text-white rounded"
+                  >
+                    Go Home
+                  </a>
                 </div>
-                <Footer />
-              </>
+              </div>
             }
           />
         </Routes>
