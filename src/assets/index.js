@@ -80,7 +80,7 @@ import webdev from "./certificates/webdev.png";
 import certificate1 from "./certificates/certificate1.png";
 import fitt from "./certificates/fitt.png";
 
-import resume from "./Abishek_Resume.pdf";
+import resume from "./Abishek_Resume_latest.pdf";
 
 export {
   resume,
