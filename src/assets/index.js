@@ -44,6 +44,20 @@ import tera from "./tech/terra.png";
 import jenkins from "./tech/Jenkins.png";
 import aws from "./tech/aws.png";
 import azure from "./tech/Azure.png";
+import pwa from "./tech/pwa.png";
+import nextjs from "./tech/nextjs.svg";
+import gitlab from "./tech/gitlab.svg";
+import firebase from "./tech/firebase.webp";
+import inngest from "./tech/inngest.png";
+import razorpay from "./tech/payment-razorpay.png";
+import grafana from "./tech/grafana.webp";
+import prometheus from "./tech/prometheus.png";
+import ubuntu from "./tech/Ubuntu.png";
+import gcp from "./tech/gcp.png";
+import digitalocean from "./tech/DigitalOcean.png";
+import vultr from "./tech/vultr.png";
+import supabase from "./tech/supabase-.webp";
+import clerk from "./tech/clerk.png";
 
 
 
@@ -155,5 +169,19 @@ export {
   tera,
   jenkins,
   aws,
-  azure
+  azure,
+  pwa,
+  nextjs,
+  gitlab,
+  firebase,
+  inngest,
+  razorpay,
+  grafana,
+  prometheus,
+  ubuntu,
+  gcp,
+  digitalocean,
+  vultr,
+  supabase,
+  clerk
 };
