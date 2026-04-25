@@ -52,12 +52,13 @@ const Hero = () => {
 
   const [text] = useTypewriter({
     words: [
-      "I'm a Junior Software Developer",
+      "I'm a Software Developer",
+      "I'm a Backend Developer",
       "I'm a Digital Marketer",
       "I'm an SEO Specialist",
       "I'm a Full-Stack Developer",
       "I'm a React Developer",
-      "I'm a Junior DevOps Engineer",
+      "I'm a DevOps Engineer",
       "I'm a Frontend Developer"
     ],
     loop: true,

@@ -1,13 +1,13 @@
 import { useRef, useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { logo } from "../../assets";
-import resume from "/src/Abishek_Resume_latest.pdf";
+import resume from "/src/Abishek_devops.pdf";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { linkRef } = useRef(null);
+  const linkRef = useRef(null);
   const location = useLocation();
 
   useEffect(() => {

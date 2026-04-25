@@ -4,16 +4,15 @@ import App from "./App.jsx";
 import "./index.css";
 import { Analytics } from "@vercel/analytics/react";
 
-// Add error handling for the root element
-const rootElement = document.getElementById("root");
-
-if (!rootElement) {
-  console.error("Root element not found!");
-  document.body.innerHTML = '<div id="root"></div>';
-}
+const rootElement = document.getElementById("root") || (() => {
+  const el = document.createElement("div");
+  el.id = "root";
+  document.body.appendChild(el);
+  return el;
+})();
 
 try {
-  ReactDOM.createRoot(document.getElementById("root")).render(
+  ReactDOM.createRoot(rootElement).render(
     <React.StrictMode>
       <App />
       <Analytics />
@@ -21,7 +20,7 @@ try {
   );
 } catch (error) {
   console.error("Error rendering app:", error);
-  document.getElementById("root").innerHTML = `
+  rootElement.innerHTML = `
     <div style="color: white; background: #000; padding: 20px; text-align: center;">
       <h1>Loading Error</h1>
       <p>Please refresh the page</p>

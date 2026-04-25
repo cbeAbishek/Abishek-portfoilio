@@ -95,11 +95,11 @@ const services = [
     icon: devops,
   },
   {
-    title: "Content Creating",
+    title: "Tech Content Creating",
     icon: backend,
   },
   {
-    title: "Event organisers",
+    title: "Tech Event organisers",
     icon: creator,
   },
 ];
