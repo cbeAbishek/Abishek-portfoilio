@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { logo } from "../../assets";
-import resume from "/src/assests/Abishek_devops.pdf";
+import { logo,resume } from "../../assets";
+//import resume from "../../assets";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
